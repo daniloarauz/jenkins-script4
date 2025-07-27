@@ -29,7 +29,7 @@ node('dev')
     stash includes: 'target/**', name: 'target-jar'
    }
 }
-node('prod'){
+node('test'){
     stage('Deploy') {
         //We unpack the target on the new node
         unstash 'target-jar'
